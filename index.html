@@ -196,7 +196,7 @@
         mixer = new THREE.AnimationMixer( avatar );
 
         arWorldRoot.add( avatar );
-        var action = mixer.clipAction( animations[ 1 ] ).play();
+        var action = mixer.clipAction( animations[ 0 ] ).play();
         onRenderFcts.push(function () {
             avatar.rotation.z+=0.02*Math.PI;
         })
