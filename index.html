@@ -186,7 +186,7 @@
     var loader = new THREE.ColladaLoader();
     loader.load( '../ardemo/examples/collada/stormtrooper/stormtrooper.dae', function ( collada ) {
        // elf = collada.scene;
-	//var animations = collada.animations;
+	var animations = collada.animations;
 
         //调整对象状态
         var avatar = collada.scene;
@@ -196,7 +196,7 @@
         mixer = new THREE.AnimationMixer( avatar );
 
         arWorldRoot.add( avatar );
-        var action = mixer.clipAction( animations[ 0 ] ).play();
+        var action = mixer.clipAction( animations[ 1 ] ).play();
         onRenderFcts.push(function () {
             avatar.rotation.z+=0.02*Math.PI;
         })
