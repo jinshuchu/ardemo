@@ -184,8 +184,8 @@
         arWorldRoot.add( elf );
     } );
 
-    var loader = new THREE.OBJLoader(loadingManager);
-    loader.load( '../ardemo/examples/collada/stormtrooper/bear.obj', function ( collada ) {
+   var loader = new THREE.ColladaLoader();
+    loader.load( '../ardemo/examples/collada/Untitled.dae', function ( collada ) {
         elf = collada.scene;
 		var animations = collada.animations;
 
